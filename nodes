@@ -1,0 +1,51 @@
+public class intList {
+	private intNode head;
+	
+	public intList()
+	{
+		this.head=null;
+	}
+	public intList(intNode node) {
+		this.head=node;
+	}
+	public boolean empty() {
+		if(this.head==null)
+			return true;
+		else
+			return false;		
+	}
+	public intNode nextElement(intNode node) {
+		return node.getNext();
+	}
+	public int getValueOfNode(intNode node) {
+		return node.getValue(); 	
+	}
+	  
+
+}
+
+public class intNode {
+	private int value;
+	private intNode next;
+	public intNode(int val) {
+		this.value=val;
+		this.next=null;
+	}
+	public intNode(int val,intNode next) {
+		this.value=val;
+		this.next=next;
+	}
+	public int getValue() {
+		return this.value;
+	}
+	public void setValue(int v) {
+		this.value=v;
+	}
+	public intNode getNext() {
+		return this.next;
+	}
+	public void setNext(intNode node) {
+		this.next=node;
+	}
+
+}
